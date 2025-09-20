@@ -1,1 +1,309 @@
-
+{
+  "Helga": {
+    "role": "Tank",
+    "rarity": "Epic",
+    "skills": [
+      {
+        "name": "Shield Bash",
+        "description": "Stuns briefly; scales with DEF."
+      },
+      {
+        "name": "Bulwark",
+        "description": "Party-wide damage reduction for short duration."
+      }
+    ],
+    "notes": "Early-game frontline; shines in F2P cores.",
+    "sources": [
+      "Arena shops",
+      "Campaign drops (ch. X-Y)"
+    ],
+    "recommended": {
+      "priority": "Early",
+      "upgrades": [
+        "Skill 2 \u2192 5, then DEF/HP gear"
+      ]
+    }
+  },
+  "Edwin": {
+    "role": "Cavalry",
+    "rarity": "Rare",
+    "stats": {
+      "attack": 1442,
+      "defense": 2220,
+      "health": 14430
+    },
+    "skills": [
+      {
+        "name": "Shrapnel Load",
+        "description": "AoE damage = ATK \u00d7 196%. Upgrade: 140/154/168/182/196%"
+      },
+      {
+        "name": "Detonate",
+        "description": "20% chance to stun for 1.5s. Upgrade: Chance 10/15/15/20/20%; Time 0.5/0.5/1/1/1.5s"
+      }
+    ],
+    "expedition_bonuses": {
+      "Cavalry Attack %": 90.07,
+      "Cavalry Defense %": 90.07
+    },
+    "growth": [
+      "Demolitions Expert: Quarry Output +25% (5/10/15/20/25%)",
+      "Stone Mining: Stone Gathering Speed +25% (5/10/15/20/25%)"
+    ],
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "notes": "Growth-focused hero boosting Stone economy and cavalry expedition stats."
+  },
+  "Seth": {
+    "role": "Infantry",
+    "rarity": "Rare",
+    "stats": {
+      "attack": 1106,
+      "defense": 2220,
+      "health": 21644
+    },
+    "skills": [
+      {
+        "name": "Hammer Burn",
+        "description": "Arc attack = ATK \u00d7 280% (upgrade 200/220/240/260/280%)"
+      },
+      {
+        "name": "Armor Enhancement",
+        "description": "Reduce damage taken up to 30% (10/15/20/25/30%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Infantry Attack %": 90.07,
+      "Infantry Defense %": 90.07
+    },
+    "growth": [
+      "Burnished Iron: Iron Output +25% (5/10/15/20/25%)",
+      "Craftsmanship: Iron Mining Speed +25% (5/10/15/20/25%)"
+    ],
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "notes": "Growth-focused hero boosting Iron economy and infantry expedition stats."
+  },
+  "Olive": {
+    "role": "Archer",
+    "rarity": "Rare",
+    "stats": {
+      "attack": 1752,
+      "defense": 2220,
+      "health": 10822
+    },
+    "skills": [
+      {
+        "name": "Rain of Arrows",
+        "description": "AoE damage = ATK \u00d7 252% (upgrade 180/198/216/234/252%)"
+      },
+      {
+        "name": "Target Lock",
+        "description": "Raises damage on target by 30% (upgrade 10/15/20/25/30%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Archer Attack %": 90.07,
+      "Archer Defense %": 90.07
+    },
+    "growth": [
+      "Green Thumb: Mill Output +25% (5/10/15/20/25%)",
+      "Forager\u2019s Luck: Bread Gathering Speed +25% (5/10/15/20/25%)"
+    ],
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "notes": "Growth-focused hero boosting bread economy and archer expedition stats."
+  },
+  "Quinn": {
+    "role": "Archer",
+    "rarity": "Epic",
+    "stats": {
+      "attack": 2157,
+      "defense": 2220,
+      "health": 13320
+    },
+    "skills": [
+      {
+        "name": "Headshot",
+        "description": "Crossbow damage = ATK \u00d7 560% (upgrade 400/440/480/520/560%)"
+      },
+      {
+        "name": "Quick Shot",
+        "description": "Attack Speed +30% (upgrade 10/15/20/25/30%)"
+      },
+      {
+        "name": "Natural Selection",
+        "description": "Damage +30% (upgrade 10/15/20/25/30%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Archer Attack %": 140.11,
+      "Archer Defense %": 140.11
+    },
+    "growth": [
+      "Sixth Sense: Damage taken -20% (upgrade 4/8/12/16/20%)",
+      "Precision Shot: 50% chance of +50% dmg (upgrade 10/20/30/40/50%)"
+    ],
+    "sources": [
+      "Tutorial Unlock",
+      "Hero Recruitment",
+      "Intel Missions"
+    ],
+    "notes": "Epic starter hero with high archer expedition buffs."
+  },
+  "Howard": {
+    "role": "Infantry",
+    "rarity": "Epic",
+    "stats": {
+      "attack": 1361,
+      "defense": 2220,
+      "health": 26640
+    },
+    "skills": [
+      {
+        "name": "Shielded Strike",
+        "description": "Shield attack AoE = ATK \u00d7 280% (upgrade 200/220/240/260/280%)"
+      },
+      {
+        "name": "Joint Defense",
+        "description": "Defense +15% to all heroes (upgrade 5/7.5/10/12.5/15%)"
+      },
+      {
+        "name": "Shield Block",
+        "description": "Damage taken -30% (upgrade 10/15/20/25/30%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Infantry Attack %": 140.11,
+      "Infantry Defense %": 140.11
+    },
+    "growth": [
+      "Defenders\u2019 Edge: Damage taken -20% (upgrade 4/8/12/16/20%)",
+      "Weaken: Enemy squads ATK -20% (upgrade 4/8/12/16/20%)"
+    ],
+    "sources": [
+      "Hero Recruitment",
+      "Conquest Battles",
+      "Intel Missions"
+    ],
+    "notes": "Durable infantry hero with group defense buffs."
+  },
+  "Diana": {
+    "role": "Archer",
+    "rarity": "Epic",
+    "stats": {
+      "attack": 2157,
+      "defense": 2220,
+      "health": 13320
+    },
+    "skills": [
+      {
+        "name": "Incendiary Arrows",
+        "description": "Target dmg ATK \u00d7 290%, AoE dmg ATK \u00d7 98% (upgrade 210/230/250/270/290%)"
+      },
+      {
+        "name": "Sharpshooter",
+        "description": "Attack Speed +30% (upgrade 10/15/20/25/30%)"
+      },
+      {
+        "name": "Deadly Strike",
+        "description": "Crit Rate +20% (upgrade 7/10/13/16/20%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Archer Attack %": 110.08,
+      "Archer Defense %": 110.08
+    },
+    "growth": [
+      "Iron Constitution: Governor Stamina cost -20% (upgrade 10/12/15/18/20%)",
+      "Quick Paced: March Speed +100% (upgrade 20/40/60/80/100%)"
+    ],
+    "sources": [
+      "Desert Trial Event"
+    ],
+    "notes": "Event-only hero; reduces stamina use and boosts march speed in expeditions."
+  },
+  "Gordon": {
+    "role": "Cavalry",
+    "rarity": "Epic",
+    "stats": {
+      "attack": 1776,
+      "defense": 2220,
+      "health": 17760
+    },
+    "skills": [
+      {
+        "name": "BBQ Feast",
+        "description": "Heal troops = ATK \u00d7 280%, +7% ATK for 4s (upgrade heal 200\u2013280%)"
+      },
+      {
+        "name": "Culinary Chaos",
+        "description": "Damage taken -30% (upgrade 10/15/20/25/30%)"
+      },
+      {
+        "name": "Emergency Snack",
+        "description": "Heal troops = ATK \u00d7 70% every 5s (upgrade 50\u201370%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Cavalry Attack %": 140.11,
+      "Cavalry Defense %": 140.11
+    },
+    "growth": [
+      "Super Nutrients: Troop HP +25% (upgrade 5/10/15/20/25%)",
+      "Trash Talk: Troop ATK +25% (upgrade 5/10/15/20/25%)"
+    ],
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Alliance Championship Store"
+    ],
+    "notes": "Support cavalry hero with healing and group buffs; ideal as joiner hero."
+  },
+  "Chenko": {
+    "role": "Cavalry",
+    "rarity": "Epic",
+    "stats": {
+      "attack": 1776,
+      "defense": 2220,
+      "health": 17760
+    },
+    "skills": [
+      {
+        "name": "Burst Fire",
+        "description": "Barrage: ATK \u00d7 75% dmg every 0.5s \u00d7 2s (upgrade 55\u201375%)"
+      },
+      {
+        "name": "Defense Upgrade",
+        "description": "Defense +70% (upgrade 25/37.5/50/62.5/70%)"
+      },
+      {
+        "name": "Weapon Upgrade",
+        "description": "Attack +24% (upgrade 8/12/16/20/24%)"
+      }
+    ],
+    "expedition_bonuses": {
+      "Cavalry Attack %": 140.11,
+      "Cavalry Defense %": 140.11
+    },
+    "growth": [
+      "Stand of Arms: Lethality +25% (upgrade 5/10/15/20/25%)",
+      "Shield Wall: Damage taken -20% (upgrade 4/8/12/16/20%)"
+    ],
+    "sources": [
+      "Path of Growth Event",
+      "Hero Recruitment",
+      "Intel Missions \u2013 Watchtower"
+    ],
+    "notes": "Top-tier cavalry joiner hero; excels in Bear Hunt with Stand of Arms skill."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Town Center": {
+    "type": "Core",
+    "unlock": "Tutorial",
+    "levels": [
+      {
+        "level": 1,
+        "cost": {
+          "wood": 0,
+          "bread": 0,
+          "stone": 0,
+          "iron": 0,
+          "truegold": 0
+        },
+        "time": "0s",
+        "power": 2000
+      },
+      {
+        "level": 2,
+        "cost": {
+          "wood": 180,
+          "bread": 0,
+          "stone": 0,
+          "iron": 0,
+          "truegold": 0
+        },
+        "time": "6s",
+        "power": 3800
+      }
+    ],
+    "notes": "Gate for most progress checks (troops, research, buildings)."
+  },
+  "Embassy": {
+    "type": "Military",
+    "unlock": "Required before Town Center upgrade beyond Level 9",
+    "effects": [
+      "Increases Ally Assists (number of helps you can receive)",
+      "Increases Ally Help Time (seconds reduced per help)",
+      "Increases Reinforce Capacity (max troops you can receive)"
+    ],
+    "notes": "Issues/responds to Alliance Help and reinforcement requests."
+  },
+  "Academy": {
+    "type": "Research",
+    "unlock": "Unlocks at Town Center Level 9",
+    "trees": [
+      "Growth",
+      "Economy",
+      "Battle"
+    ],
+    "notes": "Research institute; unlocks tech that boosts city growth, economy, and battle capabilities."
+  }
+}
