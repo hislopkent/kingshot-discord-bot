@@ -1,17 +1,33 @@
+from __future__ import annotations
+
+from discord import Interaction, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction
+
 from utils.embeds import event_to_embed
 
+
 class Events(commands.Cog):
-    def __init__(self, bot): self.bot = bot
+    def __init__(self, bot: commands.Bot) -> None:
+        self.bot = bot
+
     @app_commands.command(name="event", description="List events or show one")
-    async def event(self, interaction: Interaction, name: str | None = None):
+    async def event(self, interaction: Interaction, name: str | None = None) -> None:
         await interaction.response.defer(thinking=True, ephemeral=False)
+
         if name:
-            ev = self.bot.ds.get_event(name)
-            if not ev: return await interaction.followup.send(f"No event found for **{name}**.")
-            canon = next((k for k,v in self.bot.ds.data.get('events',{}).items() if v is ev), name)
-            return await interaction.followup.send(embed=event_to_embed(canon, ev))
-        names = list(self.bot.ds.list_events() or [])
-        return await interaction.followup.send("**Events:** " + (", ".join(sorted(names)) if names else "None"))
-async def setup(bot): await bot.add_cog(Events(bot))
+            match = self.bot.ds.lookup_event(name)
+            if not match:
+                await interaction.followup.send(f"No event found for **{name}**.")
+                return
+
+            canonical_name, event = match
+            await interaction.followup.send(embed=event_to_embed(canonical_name, event))
+            return
+
+        names = self.bot.ds.list_events()
+        listing = ", ".join(names) if names else "None"
+        await interaction.followup.send(f"**Events:** {listing}")
+
+
+async def setup(bot: commands.Bot) -> None:
+    await bot.add_cog(Events(bot))

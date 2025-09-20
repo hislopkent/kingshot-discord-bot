@@ -1,14 +1,27 @@
+from __future__ import annotations
+
+from discord import Interaction, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction
+
 from utils.embeds import hero_to_embed
 
+
 class Heroes(commands.Cog):
-    def __init__(self, bot): self.bot = bot
+    def __init__(self, bot: commands.Bot) -> None:
+        self.bot = bot
+
     @app_commands.command(name="hero", description="Look up a hero by name")
-    async def hero(self, interaction: Interaction, name: str):
+    async def hero(self, interaction: Interaction, name: str) -> None:
         await interaction.response.defer(thinking=True, ephemeral=False)
-        h = self.bot.ds.get_hero(name)
-        if not h: return await interaction.followup.send(f"Could not find hero **{name}**.")
-        canon = next((k for k,v in self.bot.ds.data.get('heroes',{}).items() if v is h), name)
-        await interaction.followup.send(embed=hero_to_embed(canon, h))
-async def setup(bot): await bot.add_cog(Heroes(bot))
+
+        match = self.bot.ds.lookup_hero(name)
+        if not match:
+            await interaction.followup.send(f"Could not find hero **{name}**.")
+            return
+
+        canonical_name, hero = match
+        await interaction.followup.send(embed=hero_to_embed(canonical_name, hero))
+
+
+async def setup(bot: commands.Bot) -> None:
+    await bot.add_cog(Heroes(bot))
