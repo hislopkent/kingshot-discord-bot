@@ -1,14 +1,27 @@
+from __future__ import annotations
+
+from discord import Interaction, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction
+
 from utils.embeds import research_to_embed
 
+
 class Research(commands.Cog):
-    def __init__(self, bot): self.bot = bot
+    def __init__(self, bot: commands.Bot) -> None:
+        self.bot = bot
+
     @app_commands.command(name="research", description="Look up a research item")
-    async def research(self, interaction: Interaction, name: str):
+    async def research(self, interaction: Interaction, name: str) -> None:
         await interaction.response.defer(thinking=True, ephemeral=False)
-        r = self.bot.ds.get_research(name)
-        if not r: return await interaction.followup.send(f"No research found for **{name}**.")
-        canon = next((k for k,v in self.bot.ds.data.get('research',{}).items() if v is r), name)
-        await interaction.followup.send(embed=research_to_embed(canon, r))
-async def setup(bot): await bot.add_cog(Research(bot))
+
+        match = self.bot.ds.lookup_research(name)
+        if not match:
+            await interaction.followup.send(f"No research found for **{name}**.")
+            return
+
+        canonical_name, research_item = match
+        await interaction.followup.send(embed=research_to_embed(canonical_name, research_item))
+
+
+async def setup(bot: commands.Bot) -> None:
+    await bot.add_cog(Research(bot))
